@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Online — 100SMILES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="wrap header-grid">
+      <div class="brand"><h1 class="logo">100SMILES</h1></div>
+      <button id="menuToggle" class="hamburger" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span></span><span></span><span></span>
+</button>
+<nav id="primaryNav" class="main-nav" role="navigation" aria-label="Primary">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="team.html">Team</a>
+  <a href="booking.html" class="cta">Book Online</a>
+  <a href="contact.html">Contact</a>
+  <a href="articles.html">Articles</a>
+  <a href="technology.html">Technology</a>
+</nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <h2>Online booking</h2>
+    <p>Complete the form below to request an appointment. Required fields are marked *</p>
+
+    <form id="bookingForm" novalidate>
+      <label for="name">Full name *</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email *</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="phone">Phone *</label>
+      <input id="phone" name="phone" type="tel" pattern="[0-9]{8,15}" required />
+      <small>Enter 8–15 digits only.</small>
+
+      <label for="service">Service required *</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select --</option>
+        <option>General check-up</option>
+        <option>Pediatric</option>
+        <option>Orthodontics</option>
+        <option>Implant</option>
+        <option>Emergency</option>
+      </select>
+
+      <label for="date">Preferred date *</label>
+      <input id="date" name="date" type="date" required />
+
+      <label for="time">Preferred time *</label>
+      <input id="time" name="time" type="time" required />
+
+      <label for="message">Additional details</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <div style="margin-top:12px">
+        <button type="submit" class="btn">Submit booking</button>
+        <button type="reset" class="btn secondary">Reset</button>
+      </div>
+    </form>
+
+    <div id="formMessage" role="status" aria-live="polite" style="margin-top:16px;"></div>
+  </main>
+
+  <footer class="site-footer"><div class="wrap"><small>© 100SMILES Dental Care</small></div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
